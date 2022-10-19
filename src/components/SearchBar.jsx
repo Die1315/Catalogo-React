@@ -1,4 +1,4 @@
-function SearchBar({ onSearch}) {
+function SearchBar({ onSearch }) {
   return (
     <div className="container-fluid">
       <input
@@ -6,8 +6,8 @@ function SearchBar({ onSearch}) {
         type="search"
         placeholder="Search"
         aria-label="Search"
-        onChange={(event) =>{
-          console.log('change.......');
+        onChange={(event) => {
+          console.log("change.......");
           console.log(event.target.value);
           onSearch(event.target.value);
         }}

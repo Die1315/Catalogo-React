@@ -5,7 +5,7 @@ import { getPost } from "../service/data-service";
 
 const initialState = [];
 
-function PostList( { value }) {
+function PostList({ value }) {
   const [posts, setPosts] = useState(initialState);
 
   useEffect(() => {
@@ -16,16 +16,18 @@ function PostList( { value }) {
     return () => {};
   }, []);
 
-  const postsComponents = posts.filter((e) => e.text.includes(value) ).map((post, i) => (
-    <Post
-      Key={i}
-      autor={post.autor}
-      image={post.image}
-      createdAt={post.createdAt}
-      text={post.text}
-      comments={post.comments}
-    />
-  ));
+  const postsComponents = posts
+    .filter((e) => e.text.includes(value))
+    .map((post, i) => (
+      <Post
+        Key={i}
+        autor={post.autor}
+        image={post.image}
+        createdAt={post.createdAt}
+        text={post.text}
+        comments={post.comments}
+      />
+    ));
   return (
     <div className="container-fluid">
       <div className="row d-flex flex-wrap justify-content-around">

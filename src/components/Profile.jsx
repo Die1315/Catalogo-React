@@ -1,5 +1,5 @@
 import "./Profile.css";
-function Profile({avatar, username, bio}) {
+function Profile({ avatar, username, bio }) {
   return (
     <div className="container d-flex align-item-center">
       <section className="mx-auto my-5" style={{ maxwidth: "25rem" }}>
@@ -16,7 +16,10 @@ function Profile({avatar, username, bio}) {
             <h4 className="card-title font-bold">@Die13</h4>
             <hr />
             <p>
-              please please that as low be Mind that wishes of this sort criticize craving to be Thank you fault pain enhanced. resultant customer service do it school district it is criticize from please for mandatory forsake fault school district escape wishes to.
+              please please that as low be Mind that wishes of this sort
+              criticize craving to be Thank you fault pain enhanced. resultant
+              customer service do it school district it is criticize from please
+              for mandatory forsake fault school district escape wishes to.
             </p>
           </div>
         </div>
