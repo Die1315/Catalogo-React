@@ -1,11 +1,27 @@
-function NavBar() {
+function NavBar({ valueClick, onProfileClick }) {
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container-fluid">
         <span className="navbar-brand mb-0 h1">
-          <i class="bi bi-lightning-charge-fill"></i>three pics
+          <i className="bi bi-lightning-charge-fill"></i>
+          <a
+            onClick={() => {
+              onProfileClick(true);
+            }}
+            className="navbar-brand"
+            href="#"
+          >
+            three pics
+          </a>
         </span>
-        <span className="bi bi-person-circle"></span>
+        <button
+          className="navbar-toggler"
+          onClick={() => {
+            onProfileClick(false);
+          }}
+        >
+          <span className="bi bi-person-circle"></span>
+        </button>
       </div>
     </nav>
   );
