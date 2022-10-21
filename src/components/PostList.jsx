@@ -5,7 +5,7 @@ import { getPost } from "../service/data-service";
 
 const initialState = [];
 
-function PostList({ value }) {
+function PostList({ search }) {
   const [posts, setPosts] = useState(initialState);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ function PostList({ value }) {
   }, []);
 
   const postsComponents = posts
-    .filter((e) => e.text.includes(value))
+    .filter((e) => e.text.includes(search))
     .map((post, i) => (
       <Post
         Key={i}

@@ -8,7 +8,7 @@ import Profile from "./components/Profile";
 const initialState = "";
 
 function App() {
-  const [value, setSearch] = useState(initialState);
+  const [search, setSearch] = useState(initialState);
   const [profile, setProfile] = useState(true);
 
   function onSearch(value) {
@@ -23,8 +23,8 @@ function App() {
       <NavBar valueClick={profile} onProfileClick={onProfile} />
       {profile === true ? (
         <>
-          <SearchBar onSearch={onSearch} />
-          <PostList value={value} />
+          <SearchBar search={search} onSearch={onSearch} />
+          <PostList search={search} />
         </>
       ) : (
         <Profile />
