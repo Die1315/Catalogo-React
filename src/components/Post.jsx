@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Moment from "react-moment";
 
-function Post({ image, createdAt, autor, text, comments }) {
+function Post({ image, createdAt, autor, text, comments, likes }) {
   /* props  props.title without {}*/
-  const [likes, setLikes] = useState(0);
+  const [addlikes, setLikes] = useState(likes);
 
   return (
     <div className="card m-3 ">
@@ -23,11 +23,11 @@ function Post({ image, createdAt, autor, text, comments }) {
                 <button
                   className="btn btn-danger"
                   onClick={() => {
-                    setLikes(likes + 1);
+                    setLikes(addlikes + 1);
                   }}
                 >
                   <i className="bi bi-heart-fill"></i>
-                  {likes}k
+                  {addlikes}k
                 </button>
               </span>
             </div>

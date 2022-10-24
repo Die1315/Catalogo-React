@@ -1,4 +1,4 @@
-function SearchBar({ search,onSearch }) {
+function SearchBar({ search, onSearch }) {
   return (
     <div className="container-fluid">
       <input

@@ -7,10 +7,12 @@ const initialState = [];
 
 function PostList({ search }) {
   const [posts, setPosts] = useState(initialState);
-
+  console.log(posts)
+ 
   useEffect(() => {
     getPost().then((posts) => {
       setPosts(posts);
+      
     });
 
     return () => {};
@@ -21,12 +23,15 @@ function PostList({ search }) {
     .map((post, i) => (
       <Post
         Key={i}
-        autor={post.autor}
+        autor={post.author.username}
         image={post.image}
         createdAt={post.createdAt}
         text={post.text}
-        comments={post.comments}
+        likes={post.likes}
+        comments={post.comments.length}
+         
       />
+      
     ));
   return (
     <div className="container-fluid">
